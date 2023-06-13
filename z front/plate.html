@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Plate</title>
+</head>
+<body>
+    <form>
+        <div class="form-group">
+          <label for="make">MAKE:</label>
+          <input type="text" id="make" name="make">
+        </div>
+      
+        <div class="form-group">
+          <label for="model">MODEL:</label>
+          <input type="text" id="model" name="model">
+        </div>
+
+        <div class="form-group">
+            <label for="plate">VEHICLE PLATE NUMBER:</label>
+            <input type="text" id="plate" name="plate" maxlength="7">
+          </div>
+      
+        <!-- <div class="form-group">
+          <label for="color">COLOR:</label>
+          <select id="color" name="color">
+            <option value="red">Red</option>
+            <option value="White">White</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="Metallic grey">Metallic grey</option>
+            <option value="other">Other</option>
+          </select>
+        </div> -->
+      
+        <div class="form-group other-color">
+          <label for="other-color">COLOR:</label>
+          <input type="text" id="other-color" name="other-color">
+        </div>
+      
+        <div class="form-group">
+        <input type="submit" value="Pay" >
+        </div>
+      </form>
+      
+      <script>
+        document.querySelector("#color").addEventListener("change", function() {
+          if (this.value === "other") {
+            document.querySelector(".other-color").style.display = "block";
+          } else {
+            document.querySelector(".other-color").style.display = "none";
+          }
+        });
+      </script>
+      
+
+</body>
+</html>

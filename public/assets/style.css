@@ -1,0 +1,264 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #a7ffeb 0%, #023661 100%);
+}
+select 
+{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: rgb(191, 204, 211);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+  }
+  
+.box{
+    height: 30px;
+    margin: right;
+    width: 50%;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.box:hover input{
+    width:400px
+}
+
+.box input{
+    width: 0;
+    outline:none;
+    border: none;
+    font-weight: 500;
+    transition: 0.5s;
+    background: transparent;
+
+}
+.box a .fas{
+    color:rgb(51, 214, 11);
+    font-size: 18px;
+}
+#location
+{
+    height: 40%;
+    width: 30%;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.select-menu
+{
+    width: 380px;
+    margin: 150px auto;
+}
+
+.select-menu .select-btn
+{
+    position: relative;
+    top: -140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    background: #fff;
+    color: #333;
+    font-size: 18px;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Changes made to make button active and rotate on click. Javascript */
+
+.select-btn .bi-arrow-down-short
+{
+    font-size: 25px;
+    transition: 1s;
+}
+
+.select-btn.active .bi-arrow-down-short
+{
+    transform: rotate(180deg);
+}
+
+.select-menu .list
+{
+    position: absolute;
+    width: 380px;
+    transform: translateY(-140px);
+    margin-top: 10px;
+}
+
+.list .option
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    background: #fff;
+    padding: 0 16px;
+    cursor: pointer;
+    transform-origin: top;
+    opacity: 0;
+    transform: scale(0) translateY(-65px);
+    margin-bottom: -55px;
+    transition: opacity .5s ease-in-out, margin-bottom .5s ease-in-out;
+    transition-delay: calc(.1s * var(--i));
+}
+
+.select-btn.active~.list .option
+{
+    transition: opacity 1s ease-in-out, transform .5s ease-in-out, margin-bottom .2s ease-in-out;
+    transition-delay: calc(.1s * var(--i));
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    margin-bottom: 0;
+}
+
+.list .option:hover
+{
+    background: #f2f2f2;
+}
+
+.list .option:nth-child(1)
+{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.list .option:nth-child(5)
+{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.option .option-text
+{
+    font-size: 18px;
+    color: #333;
+}
+/* for plate number and model*/
+h2
+{
+    text-align: center;
+}
+.input{
+    text-align: center;
+    justify-content: center;
+    margin: 70px;
+    height: 40%;
+    width: 30%;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 70px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group select {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .form-group input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+    .form-group1 input[type="submit"] 
+    {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 18px;
+        background-color: #ff0101;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+  }
+
+  .form-group1 input[type="submit"]:hover {
+    background-color: #cf1818;
+  }
+
+  .form-group input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  .next-btn
+  {
+    width: 50%;
+    padding: 10px;
+    font-size: 18px;
+    margin: 50%;
+    margin-bottom: 20%;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+   /* Styling for the header */
+   header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  /* Styling for the footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
